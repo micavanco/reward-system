@@ -3,9 +3,7 @@ import MOCK_DATA from '../assets/data/MOCK_DATA.json';
 export class PurchaseHistoryService {
 
     static subscribePurchaseHistory() {
-        return new Promise((resolve, reject) => setTimeout(() =>
-            Boolean(Math.random() * 2) ? resolve(MOCK_DATA) : reject('Something went wrong')
-        ));
+        return new Promise((resolve, reject) => setTimeout(() => resolve(MOCK_DATA), 2000));
     }
 
     static transformDataToRows(data) {

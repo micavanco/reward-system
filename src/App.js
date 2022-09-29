@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import Header from './components/header/Header';
 import { PurchaseHistoryService } from './services/PurchaseHistoryService';
+import Table from './components/table/Table';
+import Spinner from './components/spinner/Spinner';
 
 import './App.css';
-import Table from "./components/table/Table";
 
 function App() {
     const [loading, setLoading] = useState(false);
@@ -24,10 +25,14 @@ function App() {
     <div className="app">
       <Header/>
       <div className="app__container">
+          <h2>List of Transactions</h2>
           {
               !loading && tableHeader.length > 0 && tableRows.length > 0 && (
                   <Table tableHeader={tableHeader} tableRows={tableRows}/>
               )
+          }
+          {
+              loading && <Spinner/>
           }
       </div>
     </div>
