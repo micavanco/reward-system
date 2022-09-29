@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    box-shadow: -1px 10px 12px -11px rgba(0,0,0,0.5);
+    -webkit-box-shadow: -1px 10px 12px -11px rgba(0,0,0,0.5);
+    -moz-box-shadow: -1px 10px 12px -11px rgba(0,0,0,0.5);
+}
+
+.header__logo {
+    color: #9268bd;
+    margin: 0 20px;
+    font-weight: 600;
+}

@@ -1,0 +1,9 @@
+
+.table-row {
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+.table-row__cell {
+    padding: 10px;
+}
