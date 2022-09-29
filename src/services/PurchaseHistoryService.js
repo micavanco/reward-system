@@ -2,8 +2,16 @@ import MOCK_DATA from '../assets/data/MOCK_DATA.json';
 
 export class PurchaseHistoryService {
 
+    static errorState = true;
+
     static subscribePurchaseHistory() {
-        return new Promise((resolve, reject) => setTimeout(() => resolve(MOCK_DATA), 2000));
+        return new Promise((resolve, reject) => setTimeout(() => {
+            if (this.errorState) {
+                reject();
+            } else {
+                resolve(MOCK_DATA);
+            }
+        }, 2000));
     }
 
     static transformDataToRows(data) {

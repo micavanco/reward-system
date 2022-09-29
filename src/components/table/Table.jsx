@@ -3,14 +3,14 @@ import TableHeader from '../table-header/TableHeader';
 
 import './Table.css';
 
-function Table({ tableHeader, tableRows }) {
+function Table({ tableHeader, tableRows, specialKey }) {
     return (
         <table className="table">
-            <TableHeader data={tableHeader}/>
+            <TableHeader data={tableHeader} specialKey={specialKey}/>
             <tbody>
             {
-                tableRows && tableRows.length > 0 && tableRows.map(row => (
-                    <TableRow key={row[0]} data={row}/>
+                tableRows && tableRows.length > 0 && tableRows.map((row, index) => (
+                    <TableRow key={`${row[0]}-${specialKey}-${index}`} data={row}/>
                 ))
             }
             </tbody>
