@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Reward System",
+  "name": "Recruiting application to calculate reward system and list all transactions.",
   "icons": [
     {
       "src": "favicon.ico",
