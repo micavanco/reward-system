@@ -5,7 +5,7 @@ import './Table.css';
 
 function Table({ tableHeader, tableRows, specialKey }) {
     return (
-        <table className="table">
+        <table className="table" role={'table'}>
             <TableHeader data={tableHeader} specialKey={specialKey}/>
             <tbody>
             {

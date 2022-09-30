@@ -4,7 +4,7 @@ export class PurchaseHistoryService {
 
     static errorState = true;
 
-    static subscribePurchaseHistory() {
+    static getPurchaseHistory() {
         return new Promise((resolve, reject) => setTimeout(() => {
             if (this.errorState) {
                 reject();
